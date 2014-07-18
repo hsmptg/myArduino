@@ -9,6 +9,7 @@
 #include "Arduino.h"
 //add your includes for the project myArduino here
 #include "ledBut.h"
+#include "clock.h"
 
 //end of add your includes here
 #ifdef __cplusplus
