@@ -3,9 +3,10 @@
 
 void setup() {
 	initLedBut();
+	initClock();
 
 	Serial.begin(115200);
-	Serial.println("ButLed v1.0");
+	Serial.println("Clock v1.0");
 }
 
 #define CMD_SIZE 10
@@ -38,6 +39,9 @@ void procMsg(char *msg) {
 		case 'b':
 			cmdBut(msg);
 			break;
+		case 'c':
+			cmdClock(msg);
+			break;
 	}
 }
 
@@ -48,4 +52,5 @@ void loop() {
 	}
 
 	procBut();
+	procClock();
 }
